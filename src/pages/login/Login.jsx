@@ -11,9 +11,6 @@ const Login = () => {
   }
   return (
     <div className='loginContainer'>
-      <div>
-      <img src="https://picsum.photos/1920/1200" alt="" />
-      </div>
       <div className="loginFormContainer">
         <h2 className="formTitle">Sign in</h2>
         <form onSubmit={handleSubmit}>
@@ -29,7 +26,7 @@ const Login = () => {
                 </div>
             </div>
 
-            <div class="buttonSubmitDiv">
+            <div className="buttonSubmitDiv">
                 <input className="buttonSubmit btn1" type="submit" value="Sign in" />
                 <input className="buttonSubmit btn2" type="submit" value="Sign in with google" />
             </div>

@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 .loginContainer{
+    width: 100vw;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url("https://picsum.photos/800/800");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Formu kapsayan div  */

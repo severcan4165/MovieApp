@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./register.css";
-import { createUser } from "../../firebase/firebase";
+// import { createUser } from "../../firebase/firebase";
 
 const Register = () => {
   const [firstName, setFirstName] = useState("")
@@ -11,12 +11,12 @@ const Register = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log(email, password,firstName, lastName );
-    createUser(email, password);
+    // createUser(email, password);
   }
   return (
     <div className="registerContainer">
      
-        <img src="https://picsum.photos/1920/1200" alt="" />
+    
      
       <div className="formContainer">
         <h2 className="formTitle">Register</h2>
