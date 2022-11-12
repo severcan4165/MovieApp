@@ -4,6 +4,8 @@ import "./navbar.css"
 
 const NavBar = () => {
   return (
+    <>
+   
     <nav className="navBar">
       <div>
         <NavLink className="navLink" to="/">Nomadr Movie Store</NavLink>
@@ -13,6 +15,8 @@ const NavBar = () => {
         <NavLink className="navLink" to="/register">Register</NavLink>
       </div>
     </nav>
+    <div className="belowFixedDiv"></div>
+    </>
   );
 };
 

@@ -3,16 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+.loginContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 /* Formu kapsayan div  */
-.formContainer{
+.loginFormContainer{
     width: 30vw;
-    height: 69vh;
-    margin: 2rem auto;
-    background-color: #DDDDDD ;
+    height: 45vh !important ;
+    margin: 0 auto;
+    background-color: rgba(34, 118, 171, 0.5) ;
+    border-radius: 1rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
+    position: absolute;
+    top:10vh;
+    left:35vw;
+
    
 }
 
@@ -46,14 +59,14 @@
 /* submit Butonu  */
 .buttonSubmit{
     width: 10vw;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 0.3rem;
-    border: 0.5px solid gray;
+    border: 0.5px solid rgb(45, 231, 216) !important;
     padding: 0.3rem;
 }
 
 .buttonSubmit:hover{
-  background-color: rgb(168, 162, 162);
+    background-color: rgba(9, 66, 102, 0.5) !important ;
 
   color: white;
 }
