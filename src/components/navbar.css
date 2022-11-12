@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+.navBar{
+    width: 100vw;
+    height: 10vh;
+    background-color: darkkhaki;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+}
+.navLink{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 520;
+    margin-right: 2rem;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+.navLink:hover{
+    color:white;
+}
