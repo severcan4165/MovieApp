@@ -1,9 +1,11 @@
+import React from "react";
+import AppRouter from "./router/AppRouter";
 
 
 function App() {
   return (
     <div>
-      <h1>Hello Salih</h1>
+      <AppRouter/>
     </div>
   );
 }
