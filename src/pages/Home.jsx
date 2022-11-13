@@ -1,16 +1,19 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard.jsx";
+import { AuthContext } from "../context/AuthContext.jsx";
+import { toastWarnNotify } from "../helpers/ToastNotify.js";
 import HomeStyle from "./home.module.scss";
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
 const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
-// const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
+const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState("");
   const [loading, setLoading] = useState(false);
+  const {currentUser} = useContext(AuthContext);
 
   const getMovies = async (a) => {
     try {
@@ -26,6 +29,16 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(searchMovie && currentUser){
+      getMovies(searchUrl + searchMovie);
+      setSearchMovie("")
+    }
+    else if(!currentUser){
+      toastWarnNotify("please login to search");
+    }
+    else{
+      toastWarnNotify("please enter a movie name");
+    }
   };
 
   return (

@@ -16,6 +16,11 @@ const displayName = `${firstName} ${lastName}`;
     console.log(email, password,firstName, lastName );
     createUser(email, password, navigate, displayName);
   }
+
+const handleGoogle = (e) =>{
+  e.preventDefault();
+  
+}
   return (
     <div className={RegisterStyle.registerContainer}>
      
@@ -90,6 +95,7 @@ const displayName = `${firstName} ${lastName}`;
               className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn2}`}
               type="submit"
               value="Sign in with google"
+              onClick={handleGoogle}
             />
           </div>
         </form>
