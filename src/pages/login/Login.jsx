@@ -1,6 +1,7 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext'
 import { signIn } from '../../firebase/firebase'
 import "./login.css"
 
@@ -8,11 +9,12 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate();
+  const {currentUser} =useContext(AuthContext);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log(email, password);
-    signIn(email,password, navigate)
+    signIn(email,password, navigate, currentUser)
   }
   return (
     <div className='loginContainer'>
