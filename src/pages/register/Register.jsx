@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./register.css";
+import RegisterStyle from"./register.module.scss";
 import { createUser } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 
@@ -17,16 +17,16 @@ const displayName = `${firstName} ${lastName}`;
     createUser(email, password, navigate, displayName);
   }
   return (
-    <div className="registerContainer">
+    <div className={RegisterStyle.registerContainer}>
      
     
      
-      <div className="formContainer">
-        <h2 className="formTitle">Register</h2>
+      <div className={RegisterStyle.formContainer}>
+        <h2 className={RegisterStyle.formTitle}>Register</h2>
         <form onSubmit={handleSubmit}>
-          <div className="userInfo">
-            <div className="firstName inputBox">
-              <label htmlFor="firstname" className="labels">
+          <div className={RegisterStyle.userInfo}>
+            <div className={`${RegisterStyle.firstName} ${RegisterStyle.inputBox}`}>
+              <label htmlFor="firstname" className={RegisterStyle.labels}>
                 First Name
               </label>
               <br />
@@ -34,13 +34,13 @@ const displayName = `${firstName} ${lastName}`;
                 onChange={(e)=>setFirstName(e.target.value)}
                 type="text"
                 placeholder="Enter Your First Name"
-                className="inputArea"
+                className={RegisterStyle.inputArea}
                 id="firstname"
                 required
               />
             </div>
-            <div className="LastName inputBox">
-              <label htmlFor="lastname" className="labels">
+            <div className={`${RegisterStyle.LastName} ${RegisterStyle.inputBox}`}>
+              <label htmlFor="lastname" className={RegisterStyle.labels}>
                 Last Name
               </label>
               <br />
@@ -48,13 +48,13 @@ const displayName = `${firstName} ${lastName}`;
               onChange={(e)=>setLastName(e.target.value)}
                 type="text"
                 placeholder="Enter Your Last Name"
-                className="inputArea"
+                className={RegisterStyle.inputArea}
                 id="lastname"
                 required
               />
             </div>
-            <div className="email inputBox">
-              <label htmlFor="email" className="labels">
+            <div className={`${RegisterStyle.email} ${RegisterStyle.inputBox}`}>
+              <label htmlFor="email" className={RegisterStyle.labels}>
                 Email
               </label>
               <br />
@@ -62,14 +62,14 @@ const displayName = `${firstName} ${lastName}`;
               onChange={(e)=>setEmail(e.target.value)}
                 type="text"
                 placeholder="Enter Your Email"
-                className="inputArea"
+                className={RegisterStyle.inputArea}
                 id="email"
                 required
               />
             </div>
 
-            <div className="password inputBox">
-              <label htmlFor="password" className="labels">
+            <div className={`${RegisterStyle.password} ${RegisterStyle.inputBox}`}>
+              <label htmlFor="password" className={RegisterStyle.labels}>
                 Password
               </label>
               <br />
@@ -77,17 +77,17 @@ const displayName = `${firstName} ${lastName}`;
               onChange={(e)=>setPassword(e.target.value)}
                 type="text"
                 placeholder="Enter Your Password"
-                className="inputArea"
+                className={RegisterStyle.inputArea}
                 id="password"
                 required
               />
             </div>
           </div>
 
-          <div className="buttonSubmitDiv">
-            <input className="buttonSubmit btn1" type="submit" value="Sign in" />
+          <div className={RegisterStyle.buttonSubmitDiv}>
+            <input className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn1}`} type="submit" value="Sign in" />
             <input
-              className="buttonSubmit btn2"
+              className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn2}`}
               type="submit"
               value="Sign in with google"
             />
