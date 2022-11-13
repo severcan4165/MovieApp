@@ -5,7 +5,7 @@ import NavBar from '../components/NavBar'
 import Login from '../pages/login/Login'
 import Register from '../pages/register/Register'
 import PrivateRouter from './PrivateRouter'
-import MovieCard from '../components/MovieCard'
+import MovieDetails from '../pages/MovieDetails'
 
 const AppRouter = () => {
   return (
@@ -17,7 +17,7 @@ const AppRouter = () => {
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/details/:id" element={<PrivateRouter/>}>
-                <Route path="" element={<MovieCard/>} />
+                <Route path="" element={<MovieDetails/>} />
             </Route>
         </Routes>
       </BrowserRouter>

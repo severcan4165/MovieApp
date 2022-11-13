@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { toastWarnNotify } from "../helpers/ToastNotify";
 import MovieCardStyle from "./movieCard.module.scss";
-import "./movie.css"
+
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const defaultImage =
@@ -11,6 +11,7 @@ const defaultImage =
 const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
+
   let classVote;
   if(vote_average>=8){
     classVote ="green"
@@ -22,7 +23,7 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
     classVote ="red"
   }
 
-  console.log(`MovieCardStyle.`,classVote)
+  
   return (
     <>
       
