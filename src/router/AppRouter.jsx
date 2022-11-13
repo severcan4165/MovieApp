@@ -5,7 +5,7 @@ import NavBar from '../components/NavBar'
 import Login from '../pages/login/Login'
 import Register from '../pages/register/Register'
 import PrivateRouter from './PrivateRouter'
-import MovieCard from '../pages/MovieCard'
+import MovieCard from '../components/MovieCard'
 
 const AppRouter = () => {
   return (

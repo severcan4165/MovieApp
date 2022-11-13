@@ -1,0 +1,41 @@
+.form{
+    width: 40vw;
+    margin: 1rem auto;
+}
+/* Search input area styling */
+.inputArea{
+    width: 20vw;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 0.5px solid gray;
+    padding-left: 0.2rem;
+    margin: 0.5rem 0.5rem 0;
+
+
+}
+/* Search button styling */
+
+.buttonSearch{
+    width: 10vw;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 0.5px solid rgb(26, 49, 47) !important;
+    padding: 0.3rem;
+}
+
+.buttonSearch:hover{
+    background-color: rgba(9, 66, 102, 0.5) !important ;
+
+  color: white;
+}
+
+/* Movie Cards Container styling */
+
+.movieCardContainer{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:4rem;
+}
