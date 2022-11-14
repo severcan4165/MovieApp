@@ -14,11 +14,13 @@ const NavBar = () => {
       <div>
         <NavLink className="navLink" to="/">Nomadr Movie Store</NavLink>
       </div>
-      <div>
-        
+      <div className="navBarLink">
+        <div>
         {currentUser ? (<NavLink className="navLink" to="/login" onClick={() => logOut()}>Log Out</NavLink>): <NavLink className="navLink" to="/login">Login</NavLink>}
-    
-        <NavLink className="navLink" to="/register">Register</NavLink>
+        </div>
+        
+        <div><NavLink className="navLink" to="/register">Register</NavLink></div>
+        
        {currentUser && ( <div> <span> Welcome {currentUser.displayName} </span></div>)}
       </div>
       

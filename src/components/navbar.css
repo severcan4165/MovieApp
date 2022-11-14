@@ -27,3 +27,37 @@
     width: 100vw;
     height: 10vh;
 }
+@media only screen and (max-width: 600px) {
+    .navBar{
+        flex-direction: column;
+        height: 30vh;
+        width: 100%;
+        align-self: center;
+    }
+    .navBarLink{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      
+    }
+    .belowFixedDiv{
+        height: 30vh;
+    }
+    .navLink{
+        margin-right: 0;
+        display: block;
+        border-bottom: 1px solid black;
+    }
+}
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .navBarLink{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+      
+    }
+
+ }

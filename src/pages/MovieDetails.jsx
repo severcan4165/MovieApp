@@ -38,10 +38,11 @@ const MovieDetails = () => {
     
     console.log(movieDetails)
   return (
-    <div className={DetailStyle.container}>
-      <h1 className={DetailStyle.title}>{title}</h1>
+
+      
      
       <div className={DetailStyle.detailContainer}>
+        <h1 className={DetailStyle.title}>{title}</h1>
         <div className={DetailStyle.detailContent}>
           <img
             className={DetailStyle.poster}
@@ -77,7 +78,7 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    
   )
 }
 

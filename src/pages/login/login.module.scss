@@ -19,6 +19,7 @@
 /* Formu kapsayan div  */
 .loginFormContainer{
     width: 30vw;
+    
     height: 45vh !important ;
     margin: 0 auto;
     background-color: rgba(34, 118, 171, 0.5) ;
@@ -81,4 +82,13 @@
 }
 .btn2:active{
     transform: scale(0.97);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .inputArea{
+        width: 30vw;
+        font-size: 1rem;
+    }
+ 
 }
