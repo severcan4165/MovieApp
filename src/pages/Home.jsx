@@ -16,11 +16,13 @@ const Home = () => {
   const {currentUser} = useContext(AuthContext);
 
   const getMovies = async (a) => {
+    setLoading(true)
     try {
       axios.get(a).then((res) => setMovies(res.data.results));
     } catch (error) {
       console.log(error.message);
     }
+    setLoading(false)
   };
 
   useEffect(() => {

@@ -8,9 +8,9 @@ import {getAuth,
   onAuthStateChanged,
   signOut,GoogleAuthProvider, signInWithPopup } from "firebase/auth";
   import {
-    toastErrorNotify,
-    toastSuccessNotify,
-    toastWarnNotify,
+   
+    toastSuccessNotify
+  
   } from "../helpers/ToastNotify";
  
 
