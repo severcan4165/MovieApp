@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RegisterStyle from"./register.module.scss";
-import { createUser,  signInGoogle } from "../../firebase/firebase";
+import { createUser} from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -19,7 +19,7 @@ const displayName = `${firstName} ${lastName}`;
 
 const handleGoogle = (e) =>{
   e.preventDefault();
-  signInGoogle();
+  // signInGoogle();
   
 }
   return (

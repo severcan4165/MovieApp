@@ -34,7 +34,7 @@ const MovieDetails = () => {
 
     useEffect(() => {
         getMovieDetails(movieDetailBaseUrl)
-    }, [])
+    }, [movieDetailBaseUrl])
     
     console.log(movieDetails)
   return (
