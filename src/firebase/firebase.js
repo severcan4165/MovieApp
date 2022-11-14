@@ -6,12 +6,13 @@ import {getAuth,
   signInWithEmailAndPassword,
   updateProfile,
   onAuthStateChanged,
-  signOut, } from "firebase/auth";
+  signOut,GoogleAuthProvider, signInWithPopup } from "firebase/auth";
   import {
     toastErrorNotify,
     toastSuccessNotify,
     toastWarnNotify,
   } from "../helpers/ToastNotify";
+ 
 
 
 
@@ -91,3 +92,18 @@ export const logOut = () => {
   signOut(auth);
   
 };
+
+
+
+export const signInGoogle = async() =>{
+  const provider = new GoogleAuthProvider();
+  try {
+    const result = await signInWithPopup(auth, provider)
+
+    console.log(result);
+    
+  } catch (error) {
+    console.log(error)
+  }
+
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RegisterStyle from"./register.module.scss";
-import { createUser } from "../../firebase/firebase";
+import { createUser,  signInGoogle } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -19,6 +19,7 @@ const displayName = `${firstName} ${lastName}`;
 
 const handleGoogle = (e) =>{
   e.preventDefault();
+  signInGoogle();
   
 }
   return (
@@ -93,7 +94,7 @@ const handleGoogle = (e) =>{
             <input className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn1}`} type="submit" value="Sign in" />
             <input
               className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn2}`}
-              type="submit"
+              type="button"
               value="Sign in with google"
               onClick={handleGoogle}
             />
