@@ -97,7 +97,8 @@ const handleGoogle = (e) =>{
               type="button"
               value="Register with google"
               onClick={handleGoogle}
-            />
+              />
+            
           </div>
         </form>
       </div>

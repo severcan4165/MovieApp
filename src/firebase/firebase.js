@@ -8,7 +8,7 @@ import {getAuth,
   onAuthStateChanged,
   signOut,
   GoogleAuthProvider,
-  signInWithRedirect} from "firebase/auth";
+  signInWithPopup} from "firebase/auth";
   import {
    
     toastSuccessNotify
@@ -25,11 +25,11 @@ import {getAuth,
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey:process.env.REACT_APP_apiKey,
-  authDomain:process.env.authDomain,
-  projectId:process.env.projectId,
-  storageBucket:process.env.storageBucket,
-  messagingSenderId:process.env.messagingSenderId,
-  appId:process.env.appId
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
@@ -99,14 +99,14 @@ export const logOut = () => {
 
 export const signInGoogle = async(navigate) =>{
   const provider = new GoogleAuthProvider();
-  try {
-    const result = await signInWithRedirect(auth, provider);
-    navigate("/");
-    console.log(result);
-    
-  } catch (error) {
-    console.log(error.message)
-  }
-
-}
-
+  signInWithPopup(auth, provider)
+    .then((result) => {
+  
+      navigate("/");
+      toastSuccessNotify("Logged in successfully!");
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      console.log(error);
+    });
+};
