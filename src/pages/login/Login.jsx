@@ -2,7 +2,7 @@
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
-import { signIn } from '../../firebase/firebase'
+import { signIn, signInGoogle } from '../../firebase/firebase'
 import LoginStyle from "./login.module.scss"
 
 const Login = () => {
@@ -16,6 +16,12 @@ const Login = () => {
     console.log(email, password);
     signIn(email,password, navigate, currentUser)
   }
+  const handleGoogle = (e) =>{
+    e.preventDefault();
+    signInGoogle(navigate);
+    
+  }
+
   return (
     <div className={LoginStyle.loginContainer}>
       <div className={LoginStyle.loginFormContainer}>
@@ -35,7 +41,7 @@ const Login = () => {
 
             <div className={LoginStyle.buttonSubmitDiv}>
                 <input className={`${LoginStyle.buttonSubmit} ${LoginStyle.btn1}`} type="submit" value="Sign in" />
-                <input className={`${LoginStyle.buttonSubmit} ${LoginStyle.btn1}`} type="submit" value="Sign in with google" />
+                <input className={`${LoginStyle.buttonSubmit} ${LoginStyle.btn1}`} type="submit" value="Sign in with google"  onClick={handleGoogle}/>
             </div>
         </form>
     </div>

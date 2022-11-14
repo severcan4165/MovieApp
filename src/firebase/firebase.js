@@ -8,7 +8,7 @@ import {getAuth,
   onAuthStateChanged,
   signOut,
   GoogleAuthProvider,
-  signInWithPopup} from "firebase/auth";
+  signInWithRedirect} from "firebase/auth";
   import {
    
     toastSuccessNotify
@@ -100,12 +100,13 @@ export const logOut = () => {
 export const signInGoogle = async(navigate) =>{
   const provider = new GoogleAuthProvider();
   try {
-    const result = await signInWithPopup(auth, provider)
-
+    const result = await signInWithRedirect(auth, provider);
+    navigate("/");
     console.log(result);
     
   } catch (error) {
-    console.log(error)
+    console.log(error.message)
   }
 
 }
+

@@ -91,11 +91,11 @@ const handleGoogle = (e) =>{
           </div>
 
           <div className={RegisterStyle.buttonSubmitDiv}>
-            <input className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn1}`} type="submit" value="Sign in" />
+            <input className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn1}`} type="submit" value="Register" />
             <input
               className={`${RegisterStyle.buttonSubmit} ${RegisterStyle.btn2}`}
               type="button"
-              value="Sign in with google"
+              value="Register with google"
               onClick={handleGoogle}
             />
           </div>
