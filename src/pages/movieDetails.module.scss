@@ -1,9 +1,10 @@
 .detailContainer{
     text-align: center;
-    width: 100%;
-    
+    width: 100vw;
+    min-width: 40rem;
     height: 90vh;
     background-color: rgb(210, 221, 221);
+
 
 }
 .detailContent{
@@ -16,6 +17,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.title{
+    padding-top: 1rem;
+    min-width: 30rem;
 }
 .poster{
     border-radius: 1rem;

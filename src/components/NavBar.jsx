@@ -21,7 +21,7 @@ const NavBar = () => {
         
         <div><NavLink className="navLink" to="/register">Register</NavLink></div>
         
-       {currentUser && ( <div> <span> Welcome {currentUser.displayName} </span></div>)}
+       {/* {currentUser && ( <div> <span> Welcome {currentUser.displayName} </span></div>)} */}
       </div>
       
     </nav>

@@ -7,7 +7,6 @@
 .form{
     text-align: center;
     width: 100vw;
-    min-width: 40vw;
     margin-bottom:2rem;
 
 }
@@ -15,6 +14,7 @@
 .inputArea{
     width: 30vw;
     
+    min-width: 12rem;
 
     height: 3rem;
     border-radius: 0.3rem;
@@ -28,7 +28,8 @@
 
 .buttonSearch{
     width: 10vw;
-  
+    min-width: 5rem;
+
     height: 3rem;
     border-radius: 0.3rem;
     border: 0.5px solid rgb(26, 49, 47) !important;

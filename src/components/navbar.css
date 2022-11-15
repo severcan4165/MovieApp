@@ -9,10 +9,11 @@
     padding: 1rem;
     position:fixed;
     z-index: 2;
+    font-size: clamp(1.3rem, 1rem + 3vw, 2.5rem);
     
 }
 .navLink{
-    font-size: 1.8rem;
+    
     text-decoration: none;
     color: black;
     font-weight: 520;
@@ -27,12 +28,15 @@
     width: 100vw;
     height: 10vh;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 820px) {
     .navBar{
         flex-direction: column;
         height: 30vh;
         width: 100%;
+        gap:2rem;
         align-self: center;
+        justify-content: center;
+
     }
     .navBarLink{
         display: flex;
@@ -51,10 +55,11 @@
     }
 }
  /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
+ @media only screen and (min-width: 820px) {
     .navBarLink{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 0.5rem;
         align-items: center;
       
